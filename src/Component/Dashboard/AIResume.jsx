@@ -24,20 +24,36 @@ function AIResume() {
     setHasLink(linkPattern.test(value));
   };
 
-  const handleClick = async () => {
-    setIsOpen(!isOpen);
-    if (!isOpen) {
-      setLoading1(true);
-      try {
-        const response = await axios.get('YOUR_API_ENDPOINT');
-        setData(response.data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading1(false);
-      }
+  
+
+const handleClick = async () => {
+  const token = localStorage.getItem('token'); // Adjust according to your token storage method
+  console.log("token",token);
+  if (!token) {
+    setError('User not logged in');
+    return;
+  }
+
+  setIsOpen(!isOpen);
+
+  if (!isOpen) {
+    setLoading1(true);
+    try {
+      const response = await axios.post('https://api.abroadium.com/api/jobseeker/resume-improved', {
+        headers: {
+          Authorization: `${token}`,
+        },
+      });
+      setData(response.data);
+      console.log("response", response.data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading1(false);
     }
-  };
+  }
+};
+
 
   const resumeScore = async () => {
     try {
@@ -136,7 +152,7 @@ function AIResume() {
                         {isLoading ? (
                           <div>Please wait for while...</div>
                         ) : error ? (
-                          <div className='text-red-500'>{error}</div>
+                          <div className='text-red-500'>There is some error. Please try again. </div>
                         ) : (
                           <ul>
                             {Array.isArray(data) && data.length > 0 ? (
@@ -209,7 +225,7 @@ function AIResume() {
                         {isLoading ? (
                           <div>Please wait for while...</div>
                         ) : error ? (
-                          <div className='text-red-500'>{error}</div>
+                          <div className='text-red-500'>There is some error. Please try again.</div>
                         ) : (
                           <ul>
                             {Array.isArray(data) && data.length > 0 ? (
