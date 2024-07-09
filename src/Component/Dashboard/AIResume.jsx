@@ -131,7 +131,7 @@ const handleClick = async () => {
                   ) : (
                     <button
                       type='button'
-                      onClick={resumeScore}
+                      // onClick={resumeScore}
                       className='text-white hover:text-violet-950 px-1 py-1 bg-yellow-500 rounded-md text-lg font-semibold flex align-middle justify-center  items-center'
                     >
                       Score
@@ -151,7 +151,7 @@ const handleClick = async () => {
                         {isLoading ? (
                           <div>Please wait for while...</div>
                         ) : error ? (
-                          <div className='text-red-500'>There is some error. Please try again. </div>
+                          <div className='text-red-500'></div>
                         ) : (
                           <ul>
                             {Array.isArray(data) && data.length > 0 ? (
@@ -224,7 +224,7 @@ const handleClick = async () => {
                         {isLoading ? (
                           <div>Please wait for while...</div>
                         ) : error ? (
-                          <div className='text-red-500'>There is some error. Please try again.</div>
+                          <div className='text-red-500'></div>
                         ) : (
                           <ul>
                             {Array.isArray(data) && data.length > 0 ? (
