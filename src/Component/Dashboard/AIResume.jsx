@@ -14,6 +14,15 @@ function AIResume() {
 
   const [editableResumeName, setEditableResumeName] = useState('Resume1');
   const [note, setNote] = useState('');
+  const [hasLink, setHasLink] = useState(false);
+
+  const handleNoteChange = (e) => {
+    const value = e.target.value;
+    setNote(value);
+
+    const linkPattern = /(https?:\/\/[^\s]+)/g;
+    setHasLink(linkPattern.test(value));
+  };
 
   const handleClick = async () => {
     setIsOpen(!isOpen);
@@ -77,26 +86,27 @@ function AIResume() {
           <table className='border-2 border-white w-full text-white  text-lg'>
             <thead>
               <tr className='border-2 border-white'>
-                <th className='border-2 border-white px-6'>Resume</th>
-                <th className='border-2 border-white px-6'>Score</th>
-                <th className='border-2 border-white px-6'>Improve with AI</th>
+                <th className='border-2 border-white px-2 py-1'>Resume</th>
+                <th className='border-2 border-white px-2 py-1'>Resume Score</th>
+                <th className='border-2 border-white px-2 py-1'>Improve with AI</th>
                 
-                <th className='border-2 border-white px-6'>Created</th>
-                <th className='border-2 border-white px-6'>Actions</th>
-                <th className='border-2 border-white px-6 w-40'>JD Match %</th>
+                <th className='border-2 border-white px-2 py-1'>Created</th>
+                <th className='border-2 border-white px-2 py-1'>Actions</th>
+                <th className='border-2 border-white px-2 py-1'>Add JD Link</th>
+                <th className='border-2 border-white px-2 py-1'>JD Match %</th>
               </tr>
             </thead>
             <tbody >
               <tr className='border-2 border-white'>
-                <td className='border-2 border-white text-center w-4'>
+                <td className='border-2 border-white text-center w-2'>
                   <input
                     type='text'
                     value={editableResumeName}
                     onChange={(e) => setEditableResumeName(e.target.value)}
-                    className='bg-gray-800 text-white px-2 py-1 rounded-md w-40'
+                    className='bg-gray-800 text-white text-center px-1 py-1 rounded-md w-32'
                   />
                 </td>
-                <td className='border-2 border-white px-6'>
+                <td className='border-2 border-white px-4'>
                   {loading ? (
                     <div className='text-white font-semibold px-3 py-3'>Loading...</div> // Display loading indicator
                   ) : accuracyPercentage !== null ? (
@@ -109,14 +119,14 @@ function AIResume() {
                       onClick={resumeScore}
                       className='text-white hover:text-violet-950 px-1 py-1 bg-yellow-500 rounded-md text-lg font-semibold flex align-middle justify-center  items-center'
                     >
-                      Resume Score
+                      Score
                     </button>
                   )}
                 </td>
-                <td className='border-2 border-white px-6 text-center'>
+                <td className='border-2 border-white px-4 text-center'>
                   <div className='relative'>
                     <div
-                      className='text-white hover:text-yellow-500 px-2 py-2 m-2 items-center rounded-md text-lg font-bold bg-yellow-500 cursor-pointer'
+                      className='text-white hover:text-black px-1 py-1 items-center rounded-md text-base font-bold bg-yellow-500 cursor-pointer'
                       onClick={handleClick}
                     >
                       AI
@@ -145,41 +155,51 @@ function AIResume() {
                   </div>
                 </td>
                 
-                <td className='border-2 border-white px-6'>02/07/2024</td>
-                <td className='border-2 border-white px-6'>
+                <td className='border-2 border-white px-4'>02/07/2024</td>
+                <td className='border-2 border-white px-2'>
+                <Link to='/uploadresume'>
                   <i className='fa-solid fa-upload px-1'></i>
+                  </Link>
+                  <Link to='/uploadresume'>
                   <i className='fa-solid fa-pen-to-square px-1'></i>
-                  <i className='fa-solid fa-trash px-1'></i>
+                  </Link>
+                  
+                  <button className=' px-2 py-1 rounded-lg font-semibold bg-yellow-500'>View</button>
                 </td>
-                <td className='border-2 border-white px-6'>
+                <td className='border-2 border-white px-2'>
                   <textarea
                     value={note}
-                    onChange={(e) => setNote(e.target.value)}
+                    onChange={handleNoteChange}
                     className='bg-gray-800 text-white px-2 py-1 rounded-md w-full'
                     rows='2'
                   />
+                  {hasLink && (
+        <button className='bg-yellow-500 text-white px-2 py-1 rounded-md mt-2'>
+          Match
+        </button>
+      )}
                 </td>
               </tr>
               
 
 
               <tr className='border-2 border-white'>
-                <td className='border-2 border-white px-2'>
+                <td className='border-2 border-white text-center px-1'>
                  Resume2
                 </td>
-                <td className='border-2 border-white px-6'>
+                <td className='border-2 border-white px-4'>
                 <button
                       type='button'
                       
                       className='text-white hover:text-violet-950 px-1 py-1 bg-yellow-500 rounded-md text-lg font-semibold flex align-middle justify-center  items-center'
                     >
-                      Resume Score
+                      Score
                     </button>
                 </td>
-                <td className='border-2 border-white px-6 text-center'>
+                <td className='border-2 border-white px-4 text-center'>
                   <div className='relative'>
                     <div
-                      className='text-white hover:text-yellow-500 px-2 py-2 m-2 items-center rounded-md text-lg font-bold bg-yellow-500 cursor-pointer'
+                      className='text-white hover:text-black px-1 py-1  items-center rounded-md text-base font-bold bg-yellow-500 cursor-pointer'
                       onClick={handleClick}
                     >
                       AI
@@ -208,14 +228,30 @@ function AIResume() {
                   </div>
                 </td>
                 
-                <td className='border-2 border-white px-6'>02/07/2024</td>
-                <td className='border-2 border-white px-6'>
+                <td className='border-2 border-white px-4'>02/07/2024</td>
+                <td className='border-2 border-white px-2'>
+                  <Link to='/uploadresume'>
                   <i className='fa-solid fa-upload px-1'></i>
+                  </Link>
+                  
+                  <Link to='/uploadresume'>
                   <i className='fa-solid fa-pen-to-square px-1'></i>
-                  <i className='fa-solid fa-trash px-1'></i>
+                  </Link>
+                  
+                  <button className=' px-2 py-1 rounded-lg font-semibold bg-yellow-500'>View</button>
                 </td>
-                <td className='border-2 border-white px-6'>
-                
+                <td className='border-2 border-white px-2'>
+                <textarea
+                    value={note}
+                    onChange={handleNoteChange}
+                    className='bg-gray-800 text-white px-2 py-1 rounded-md w-full'
+                    rows='2'
+                  />
+                  {hasLink && (
+        <button className='bg-yellow-500 text-white px-2 py-1 rounded-md mt-2'>
+          Match
+        </button>
+      )}
                 </td>
               </tr>
             </tbody>
