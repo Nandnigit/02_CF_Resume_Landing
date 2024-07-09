@@ -69,9 +69,8 @@ const handleClick = async () => {
         requestBody,
         {
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': token // Include 'Bearer ' prefix if using Bearer token
-          }
+            Authorization: `${token}`,
+          },
         }
       );
   
