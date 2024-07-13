@@ -50,7 +50,7 @@ const allDetailsFilled6 = summary.every(summar =>
     areAllFieldsFilled(summar, [ 'summarydescription'])
   );
   return (
-    <div className={`border px-5 ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`} style={{ fontFamily: font }}>
+    <div className={`border px-5 ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`} style={{ fontFamily: font,  backgroundColor: boxBgColor  }}>
      {!isPreviewScreen && !isTemplate1Previewing && (
         <div className="">
           {allDetailsFilled && (

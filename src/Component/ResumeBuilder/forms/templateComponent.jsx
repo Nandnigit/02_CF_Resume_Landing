@@ -9,6 +9,9 @@ import Template7 from '../templates/Template7';
 import Template8 from '../templates/Template8';
 import Template9 from '../templates/Template9';
 import Template10 from '../templates/Template10';
+import Template13 from '../templates/Template13';
+import Template14 from '../templates/Template14';
+import Template15 from '../templates/Template15';
 
 const TemplateComponent = forwardRef(({ image, data, selectedTemplate, selectedFont, textSize, setBoxBgColor, sectionSpacing, paragraphSpacing, lineSpacing, boxBgColor, isPreviewScreen, predefinedText , handleImageUpload,skillsfromapi ,id}, ref) => {
 console.log(image, '=====')
@@ -51,6 +54,15 @@ console.log(image, '=====')
       break;
     case 'Template10':
       SelectedTemplateComponent = Template10;
+      break;
+      case 'Template13':
+      SelectedTemplateComponent = Template13;
+      break;
+      case 'Template14':
+        SelectedTemplateComponent = Template14;
+        break;
+      case 'Template15':
+      SelectedTemplateComponent = Template15;
       break;
     default:
       SelectedTemplateComponent = Template1;

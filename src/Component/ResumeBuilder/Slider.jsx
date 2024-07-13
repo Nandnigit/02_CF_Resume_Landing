@@ -29,7 +29,7 @@ const Slider = ({
     if (currentStep === index) {
       className += 'text-blue-900 bg-white font-bold ';
     } else {
-      className += 'hover:text-blue-950 ';
+      className += 'hover:text-yellow-600 ';
     }
     if (completeness[index]) {
       className += 'bg-white-500 text-blue'; // Mark as complete with green color
@@ -40,7 +40,7 @@ const Slider = ({
   };
 
   return (
-    <div className="h-full pb-80 justify-center" style={{ backgroundColor: '#333456', color: '#F2931C'}}>
+    <div className="h-full w-40 pb-80 justify-center px-4" style={{ backgroundColor: '#333456', color: '#F2931C'}}>
       <div className='pt-14 '>
         <img src={logo}  className='w mb-10'style={{ width:'130px'}} alt="" />
       </div>
@@ -65,8 +65,8 @@ const Slider = ({
           {sections.map((section, index) => (
             <li
               key={index}
-              className={`cursor-pointer align-middle px-1 text-sm ${
-                currentStep === index ? 'font-semibold text-white text-sm' : 'hover:text-blue-800 text-white'
+              className={`cursor-pointer align-middle px-2 text-sm font-semibold ${
+                currentStep === index ? 'font-bold text-white text-base' : 'hover:text-yellow-500 text-white'
               }`}
               onClick={() => setCurrentStep(index)}
             >

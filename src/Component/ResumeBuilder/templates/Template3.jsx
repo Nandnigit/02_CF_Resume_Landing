@@ -43,7 +43,7 @@ const Template3 = ({
 
   return (
     <div className={`p-10 font-serif border-2 ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`}
-         style={{ fontFamily: font }}>
+    style={{ fontFamily: font,  backgroundColor: boxBgColor  }}>
 
       {/* Details */}
       {details.map((del, index) => (

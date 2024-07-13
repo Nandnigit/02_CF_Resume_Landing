@@ -9,6 +9,10 @@ const FontSelector = ({ selectedFont, setSelectedFont }) => (
       <option value="Georgia">Georgia</option>
       <option value="Lucida">Lucida</option>
       <option value="Roboto">Roboto</option>
+      <option value="Poppins">Poppins</option>
+      <option value="Ubuntu">Ubuntu</option>
+      <option value="Prompt">Prompt</option>
+      
     </select>
   </div>
 );

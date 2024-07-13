@@ -9,6 +9,10 @@ import template7 from '../cvFunctionality/templateimages/template7.png';
 import template8 from '../cvFunctionality/templateimages/template8.png';
 import template9 from '../cvFunctionality/templateimages/template9.png';
 import template10 from '../cvFunctionality/templateimages/template10.png';
+import template13 from '../cvFunctionality/templateimages/template13.jpg';
+import template14 from '../cvFunctionality/templateimages/template14.jpg';
+import template15 from '../cvFunctionality/templateimages/template15.jpg';
+import Modal from './Modal'; // Import the Modal component
 
 const templates = [
   { id: 'Template1', name: 'Template 1', image: template1 },
@@ -21,15 +25,14 @@ const templates = [
   { id: 'Template8', name: 'Template 8', image: template8 },
   { id: 'Template9', name: 'Template 9', image: template9 },
   { id: 'Template10', name: 'Template 10', image: template10 },
+  { id: 'Template13', name: 'Template 13', image: template13 },
+  { id: 'Template14', name: 'Template 14', image: template14 },
+  { id: 'Template15', name: 'Template 15', image: template15 },
 ];
 
 const TemplateSelector = ({ selectedTemplate, setSelectedTemplate, onImageUpload }) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   const [uploadedImage, setUploadedImage] = useState(null);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -40,32 +43,32 @@ const TemplateSelector = ({ selectedTemplate, setSelectedTemplate, onImageUpload
   return (
     <div className="">
       <button
-        onClick={toggleDropdown}
+        onClick={() => setModalOpen(true)}
         className="text-black border-blue-950 border-2 rounded font-bold p-2 w-full"
       >
         Select Templates
       </button>
 
-      {dropdownOpen && (
-        <div className="h-60 z-10 bg-white border rounded-lg shadow-lg mt-2 p-4 overflow-auto">
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+        <div className=" h-[600px]  z-10 bg-white border rounded-lg shadow-lg mt-2 p-4 overflow-auto">
           <div className="grid grid-cols-2 gap-4 overflow-auto">
             {templates.map((template) => (
               <div
                 key={template.id}
-                className={`border-2 cursor-pointer ${
+                className={`border-2 rounded-xl border-gray-800 cursor-pointer hover:shadow-xl ${
                   selectedTemplate === template.id ? 'border-blue-950 bg-blue-200' : 'border-gray-300 bg-white'
                 }`}
                 onClick={() => {
                   setSelectedTemplate(template.id);
-                  setDropdownOpen(false); // Close dropdown after selection
+                  setModalOpen(false); // Close modal after selection
                 }}
               >
-                <img src={template.image} alt={template.name} className="w-full h-36 object-cover rounded-lg" />
+                <img src={template.image} alt={template.name} className="w-full h-full object-cover rounded-xl" />
               </div>
             ))}
           </div>
         </div>
-      )}
+      </Modal>
     </div>
   );
 };

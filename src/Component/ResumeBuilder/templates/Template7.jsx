@@ -52,7 +52,7 @@ const Template7 = ({
   return (
     <div
       className={`border-2 border-gray-300 px-5 break-all ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`}
-      style={{ fontFamily: font }}
+      style={{ fontFamily: font,  backgroundColor: boxBgColor  }}
     >
       {/* Red circle indicating all fields are filled */}
       {!isPreviewScreen  && (

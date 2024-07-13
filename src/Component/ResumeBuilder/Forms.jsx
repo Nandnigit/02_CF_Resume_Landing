@@ -25,14 +25,18 @@ import TemplateComponent from './forms/templateComponent';
 
 const predefinedColors = {
   Template1: '#F5F5F5',
-  Template3: '#F0FFF0',
-  Template4: '#FFDAB9',
-  Template5: 'lightgray',
-  Template6: '#FFEBEF',
-  Template7: '#FFEDCC',
-  Template8: '#27384C',
-  Template9: '#27384C',
-  Template10: '#323B4C',
+  Template2: '#F5F5F5',
+  Template3: '#F5F5F5',
+  Template4: '#F5F5F5',
+  Template5: '#F5F5F5',
+  Template6: '#F5F5F5',
+  Template7: '#F5F5F5',
+  Template8: '#F5F5F5',
+  Template9: '#F5F5F5',
+  Template10: '#F5F5F5',
+  Template13: '#F5F5F5',
+  Template14: '#F5F5F5',
+  Template15: '#F5F5F5',
 };
 
 const predefinedText = {
@@ -414,7 +418,7 @@ return (<div>
 </div>
 
         <div className="flex">
-        <div className="w-1/12 bg-[#333456] hidden md:block">
+        <div className=" bg-[#333456] hidden md:block">
             <Slider
               sectionsList={sectionsList}
               currentStep={currentStep}

@@ -51,7 +51,7 @@ const Template6 = ({
 
   return (
     <>
-      <div className={`p-8 text-violet-800 break-all bg-red-50 ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`} style={{ fontFamily: font }}>
+      <div className={`p-8 text-violet-800 break-all bg-red-50 ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`} style={{ fontFamily: font,  backgroundColor: boxBgColor  }}>
         {/* Red circle indicating all fields are filled */}
         {!isPreviewScreen  && (
         <div className="">
