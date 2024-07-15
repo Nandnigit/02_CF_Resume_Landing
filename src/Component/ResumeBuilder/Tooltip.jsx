@@ -20,7 +20,7 @@ function Tooltip() {
   }, [linesOfText.length]);
 
   return (
-    <div className="sliding-box bg-blue-200 font-semibold  rounded-full  text-xs p-3  shadow w-64 text-center   ">
+    <div className=" hidden md:block sliding-box bg-blue-200 font-semibold  rounded-full  text-xs p-3  shadow w-64 text-center   ">
       {linesOfText[currentLineIndex]}
     </div>
   );

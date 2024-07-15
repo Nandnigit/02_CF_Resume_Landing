@@ -34,17 +34,17 @@ function Selectionresume() {
         <UploadScreen />
       ) : (
         <>
-         <div className="flex justify-between  p-2 h-14 " style={{backgroundColor: '#333456', color: '#F2931C'}}>
+         <div className="flex  justify-between  p-2 h-14 " style={{backgroundColor: '#333456', color: '#F2931C'}}>
           
           <img src={logo} alt=""  style={{width:'130px'}} />
             </div>
-          <div className="h-screen">
+          <div className=" h-screen">
           <div className="text-center my-10">
             <h1 className="font-bold text-3xl mb-3">Are you uploading an existing resume?</h1>
             <h6 className="text-sm font-medium text-slate-500">Just review, edit, and update it with new information</h6>
           </div>
     
-          <div className="flex text-center justify-center gap-10">
+          <div className="md:flex px-3 text-center justify-center md:gap-10">
           <button onClick={handleClick2}>
           <div className=" my-10 p-10 px-16 border rounded-md border-gray-400">
           <img src={upload} alt="" style={{height:'50px'}} className="ms-28"/>
@@ -61,7 +61,13 @@ function Selectionresume() {
     
           </div>
           </div>
+          
+          <div className=" hidden md:block">
           <Footer/>
+          </div>
+          
+          
+          
         </>
         
       )}

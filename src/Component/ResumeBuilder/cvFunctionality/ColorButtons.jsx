@@ -2,7 +2,7 @@
 import React from 'react';
 
 const ColorButtons = ({ setBoxBgColor }) => (
-  <div className="flex justify-around gap-2 ">
+  <div className=" hidden md:flex justify-around gap-2 ">
     <button
       className="bg-gray-100 hover:bg-gray-100 text-white font-bold p-4 h-3 rounded-full text-xs"
       onClick={() => setBoxBgColor('lightgray') }

@@ -388,7 +388,8 @@ return (<div>
     {!isPreviewing ? (
       <>
       {console.log(id,'testfo rid')}
-      <div className="flex flex-col sm:flex-row justify-between border-2 p-1 bg-slate-300">
+      <div className=' flex flex-col'>
+      <div className="flex flex-col md:flex-row justify-between border-2 p-1 bg-slate-300">
   <button
     onClick={handlePrevious}
     className="bg-white text-blue-800 border-blue-800 border-2 px-6 sm:px-10 py-2 rounded-full font-bold mb-2 sm:mb-0 hidden sm:block"
@@ -396,16 +397,17 @@ return (<div>
   >
     Previous
   </button>
-  <div className="flex flex-wrap sm:flex-nowrap gap-3 items-center">
+  
+  <div className=" hidden md:flex flex-wrap md:flex-nowrap gap-3 items-center">
     {/* Fonts selector (hidden on mobile) */}
-    <div className="font-semibold hidden sm:block">Fonts:</div>
-    <div className="flex gap-3 items-center hidden sm:flex">
+    <div className="font-semibold hidden md:block">Fonts:</div>
+    <div className="hidden gap-3 items-center md:flex">
       <FontSelector selectedFont={selectedFont} setSelectedFont={setSelectedFont} />
     </div>
     
     {/* Color selector (hidden on mobile) */}
-    <div className="font-semibold hidden sm:block">Color:</div>
-    <div className="flex gap-3 items-center hidden sm:flex">
+    <div className="font-semibold hidden md:block">Color:</div>
+    <div className="hidden gap-3 items-center md:flex">
       <ColorButtons setBoxBgColor={setBoxBgColor} />
     </div>
   </div>
@@ -416,6 +418,24 @@ return (<div>
     {screenNames[sectionsList[currentStep + 1]] || 'Preview'}
   </button>
 </div>
+
+<div className=" bg-[#333456] hidden md:block">
+            <Slider
+              sectionsList={sectionsList}
+              currentStep={currentStep}
+              setCurrentStep={setCurrentStep}
+              isDetailsComplete={isDetailsComplete}
+              Step={currentStep}
+             
+              isDetailsComplete2={isDetailsComplete2}
+              isDetailsComplete3={isDetailsComplete3}
+              isDetailsComplete4={isDetailsComplete4}
+              isDetailsComplete5={isDetailsComplete5}
+              isDetailsComplete6={isDetailsComplete6}
+            />
+          </div>
+      </div>
+      
 
         <div className="flex">
         <div className=" bg-[#333456] hidden md:block">
@@ -438,7 +458,7 @@ return (<div>
               {/* Conditionally render the screen component based on the current section */}
               {showComponent && screenComponents[sectionsList[currentStep]]}
             </div>
-            <div className="w-3/6 p-3 h-screen">
+            <div className="md:w-3/6 p-3 h-screen">
           
               {/* Render Active Section */}
               {(() => {
@@ -534,7 +554,7 @@ start_date={resumeData.employmenthistory[0]?.start_date}
                 }
               })()}
             </div>
-            <div className=" w-4/6 ms-10 overflow-y-auto overflow-x-auto h-full  py-10 mb-10 border-r-2">
+            <div className=" md:w-4/6 md:ms-10 md:overflow-y-auto md:overflow-x-auto h-full  py-10 mb-10 border-r-2">
               <div className=' mb-5 ms-60 '><Tooltip/></div>
               
               <TemplateComponent
@@ -589,7 +609,9 @@ start_date={resumeData.employmenthistory[0]?.start_date}
     {!isPreviewing ? (
       <>
         {console.log(id,'testfo dsdsrid')}
-      <div className="flex flex-col sm:flex-row justify-between border-2 p-1 bg-slate-300">
+
+        <div className=' flex flex-col'>
+        <div className="flex flex-col sm:flex-row justify-between border-2 p-1 bg-slate-300">
   <button
     onClick={handlePrevious}
     className="bg-white text-blue-800 border-blue-800 border-2 px-6 sm:px-10 py-2 rounded-full font-bold mb-2 sm:mb-0 hidden sm:block"
@@ -600,13 +622,13 @@ start_date={resumeData.employmenthistory[0]?.start_date}
   <div className="flex flex-wrap sm:flex-nowrap gap-3 items-center">
     {/* Fonts selector (hidden on mobile) */}
     <div className="font-semibold hidden sm:block">Fonts:</div>
-    <div className="flex gap-3 items-center hidden sm:flex">
+    <div className="flex gap-3 items-center  sm:flex">
       <FontSelector selectedFont={selectedFont} setSelectedFont={setSelectedFont} />
     </div>
     
     {/* Color selector (hidden on mobile) */}
     <div className="font-semibold hidden sm:block">Color:</div>
-    <div className="flex gap-3 items-center hidden sm:flex">
+    <div className="flex gap-3 items-center  sm:flex">
       <ColorButtons setBoxBgColor={setBoxBgColor} />
     </div>
   </div>
@@ -618,8 +640,7 @@ start_date={resumeData.employmenthistory[0]?.start_date}
   </button>
 </div>
 
-        <div className="flex">
-        <div className="w-1/12 bg-[#333456] hidden md:block">
+<div className="w-1/12 bg-[#333456] hidden md:block">
             <Slider
               sectionsList={sectionsList}
               currentStep={currentStep}
@@ -634,12 +655,17 @@ start_date={resumeData.employmenthistory[0]?.start_date}
               isDetailsComplete6={isDetailsComplete6}
             />
           </div>
-          <div className="flex w-full sm:w-full justify-end">
+        </div>
+      
+
+        <div className="flex">
+       
+          <div className="flex flex-col md:flex-row w-full sm:w-full justify-end">
             <div className="absolute h-screen ">
               {/* Conditionally render the screen component based on the current section */}
               {showComponent && screenComponents[sectionsList[currentStep]]}
             </div>
-            <div className="w-3/6 p-3 h-screen">
+            <div className="md:w-3/6  p-3 h-screen">
           
               {/* Render Active Section */}
               {(() => {
@@ -720,7 +746,7 @@ start_date={resumeData.employmenthistory[0]?.start_date}
                 }
               })()}
             </div>
-            <div className=" w-4/6 ms-10 overflow-y-auto overflow-x-auto h-full  py-10 mb-10 border-r-2">
+            <div className=" md:w-4/6 md:ms-10 md:overflow-y-auto md:overflow-x-auto h-full  py-10 mb-10 border-r-2 ">
               <div className=' mb-5 ms-60 '><Tooltip/></div>
               
               <TemplateComponent

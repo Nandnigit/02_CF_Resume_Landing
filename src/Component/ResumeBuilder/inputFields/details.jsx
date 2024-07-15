@@ -99,7 +99,7 @@ console.log(image);
           <div key={index} className=" mt-8 ">
             <div className="m-2 px-10  gap-3 w-full">
               <div className="">
-                <div className="flex gap-10 justify-around ">
+                <div className="flex  gap-10 justify-around ">
                   <div className="w-3/5 justify-center px-10">
                     {image ? (
                       <img
@@ -118,7 +118,7 @@ console.log(image);
                     )}
                     <label
                       htmlFor="profilePicture"
-                      className="block text-sm font-medium   mb-4 text-center  py-2 rounded-full border-blue-950 border-2"
+                      className="block text-sm font-medium   md:mb-4 text-center  py-2 rounded-lg border-blue-950 border-2"
                     >
                       Profile Picture
                     </label>
@@ -220,7 +220,7 @@ console.log(image);
                                   <h3 className='my-4 font-bold'>Add additional information to your resume <span className='font-normal'>(optional)</span></h3>
                                   <div className='flex gap-7'>
                                     <div>
-                                      <button className="font- text-lg flex items-center border-2 border-black rounded-full py-1 px-5 my-3" onClick={() => toggleGithub(index)}>
+                                      <button className="hidden text-lg md:flex items-center border-2 border-black rounded-full py-1 px-5 md:my-3" onClick={() => toggleGithub(index)}>
                                         <h3>GitHub +</h3>
                                       </button>
                                       {showGithub && (
@@ -245,7 +245,7 @@ console.log(image);
                                       )}
                                     </div>
                                     <div>
-                                      <button className=" text-lg flex items-center border-2 border-black rounded-full py-1 px-5 my-3" onClick={() => toggleLanguage(index)}>
+                                      <button className=" hidden text-lg md:flex items-center border-2 border-black rounded-full py-1 px-5 my-3" onClick={() => toggleLanguage(index)}>
                                         <h3>Language - Expertise +</h3>
                                       </button>
                                       {showLanguage && (
@@ -272,7 +272,7 @@ console.log(image);
                                   </div>
                                   <div className='flex gap-9'>
                                     <div>
-                                      <button className=" text-lg flex items-center border-2 border-black rounded-full py-1 px-5 my-3" onClick={() => toggleProjects(index)}>
+                                      <button className=" hidden text-lg md:flex items-center border-2 border-black rounded-full py-1 px-5 my-3" onClick={() => toggleProjects(index)}>
                                         <h3>Projects +</h3>
                                       </button>
                                       {showProjects && (
@@ -297,7 +297,7 @@ console.log(image);
                                       )}
                                     </div>
                                     <div>
-                                      <button className=" text-lg flex items-center border-2 border-black rounded-full py-1 px-5 my-3" onClick={() => toggleAchievement(index)}>
+                                      <button className=" hidden text-lg md:flex items-center border-2 border-black rounded-full py-1 px-5 my-3" onClick={() => toggleAchievement(index)}>
                                         <h3>Awards & Achievement +</h3>
                                       </button>
                                       {showAchievement && (

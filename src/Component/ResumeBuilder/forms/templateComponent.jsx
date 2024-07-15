@@ -70,7 +70,7 @@ console.log(image, '=====')
 
   return (
     <div ref={ref} className='bg-white'>
-      <div className=''>
+      <div className=' '>
       <SelectedTemplateComponent
       
   data={data}
