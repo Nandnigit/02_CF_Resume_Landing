@@ -46,7 +46,7 @@ const TemplateSelector = ({ selectedTemplate, setSelectedTemplate, onImageUpload
         onClick={() => setModalOpen(true)}
         className="text-black border-blue-950 border-2 rounded font-bold p-2 w-full"
       >
-        Select Templates
+        change templates
       </button>
 
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
