@@ -438,21 +438,7 @@ return (<div>
       
 
         <div className="flex">
-        <div className=" bg-[#333456] hidden md:block">
-            <Slider
-              sectionsList={sectionsList}
-              currentStep={currentStep}
-              setCurrentStep={setCurrentStep}
-              isDetailsComplete={isDetailsComplete}
-              Step={currentStep}
-             
-              isDetailsComplete2={isDetailsComplete2}
-              isDetailsComplete3={isDetailsComplete3}
-              isDetailsComplete4={isDetailsComplete4}
-              isDetailsComplete5={isDetailsComplete5}
-              isDetailsComplete6={isDetailsComplete6}
-            />
-          </div>
+        
           <div className="flex w-full sm:w-full justify-end">
             <div className="absolute h-screen ">
               {/* Conditionally render the screen component based on the current section */}
