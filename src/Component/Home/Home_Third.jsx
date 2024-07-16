@@ -22,7 +22,7 @@ function Home_Third() {
       <div className=' flex justify-center bg-gray-100'>
         <div className=' md:w-[78%] rounded-xl py-5 px-4' id='home_third'>
           
-        <div className=' flex flex-col gap-2 justify-evenly md:flex-row  text-white rounded-xl  px-5 ' >
+        <div className=' flex flex-col gap-2 justify-evenly md:flex-row  text-white rounded-xl  md:px-5 ' >
           
           <div className=' flex align-middle items-center'>
             
@@ -85,7 +85,7 @@ function Home_Third() {
 
       <div className='flex flex-col gap-5 border-2 my-8 rounded-xl bg-white justify-center px-5 py-10 shadow-md shadow-gray-600 md:mx-auto md:w-[78%]'>
   <div className='flex flex-col items-center'>
-    <h1 className='text-5xl font-bold text-center py-6'>Explore Our Wide Range Of Trending Templates That Recruiters Loves To See
+    <h1 className=' text-3xl md:text-5xl font-bold text-center py-6'>Explore Our Wide Range Of Trending Templates That Recruiters Loves To See
     </h1>
     <div className=' flex gap-2'>
     <div className=' text-lg text-left flex flex-col gap-1'>

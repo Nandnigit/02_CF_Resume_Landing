@@ -56,7 +56,7 @@ const Dashboard = () => {
       }, []);
 
   return (
-    <div className=" min-h-screen w-11/12 bg-gray-900  py-12 text-white" id='bghome-dash'>   
+    <div className=" min-h-screen w-screen md:w-11/12 bg-gray-900  py-12 text-white" id='bghome-dash'>   
       <main className=" p-4 md:px-10">
         <section>
         <SlidingText/>  
