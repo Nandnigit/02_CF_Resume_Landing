@@ -147,9 +147,9 @@ const allDetailsFilled6 = summary.every(summar =>
                 <li>
                   <span className="m-2">&#8226;</span>{skill.skillname}
                 </li>
-                <li className='text-xs md:text-xs lg:text-xs'>
+                {/* <li className='text-xs md:text-xs lg:text-xs'>
                   <span className="m-2">&#8226;</span>{skill.skilldetails}
-                </li>
+                </li> */}
               </ul>
             </div>
           ))}

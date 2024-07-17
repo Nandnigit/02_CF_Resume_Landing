@@ -154,7 +154,7 @@ const Template4 = ({
         {skills.map((skill, index) => (
           <div key={index} className="flex">
             <span className="font-bold text-xs sm:text-sm w-32">{skill.skillname}</span>
-            <h6 className="text-xs sm:text-sm">{skill.skilldetails}</h6>
+            {/* <h6 className="text-xs sm:text-sm">{skill.skilldetails}</h6> */}
           </div>
         ))}
 

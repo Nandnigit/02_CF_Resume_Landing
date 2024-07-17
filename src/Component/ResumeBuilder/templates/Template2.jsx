@@ -109,14 +109,11 @@ const Template2 = ({
                       // If company description is provided, split by new lines and render each line as a list item
                       exp.companydescription.split(/\r?\n/).map((line, i) => (
                         <li
-                          key={i}
-                          className={`${paragraphSpacingClass} ${
-                            line.trim() ? 'before:content-["•"] before:mr-1' : ''
-                          } text-xs sm:text-xs md:text-xs lg:text-xs m-2 w-2/2 break-all`}
-                          style={{ marginBottom: '4px' }} // Adjust margin bottom as needed
-                        >
-                          {line}
-                        </li>
+        key={i}
+        className={`${line.trim() ? 'before:content-[""] before:mr-1' : ''} text-xs sm:text-xs md:text-xs lg:text-xs m-2 w-full break-all`}
+        style={{ marginBottom: '4px' }} // Adjust margin bottom as needed
+        dangerouslySetInnerHTML={{ __html: line ? `${line}` : '' }}
+      />
                       ))
                     ) : (
                       // Otherwise, render predefinedText.experiences.companydescription
@@ -175,9 +172,9 @@ const Template2 = ({
                 <div>
                   {skill.skillname || predefinedText.skills.skillname}
                 </div>
-                <div className='text-xs md:text-xs lg:text-xs'>
+                {/* <div className='text-xs md:text-xs lg:text-xs'>
                   {skill.skilldetails || predefinedText.skills.skilldetails}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

@@ -107,7 +107,7 @@ const Template3 = ({
           <div key={index}>
             <ol className="text-xs md:text-xs lg:text-xs mt-2 font-bold">
               <li>{skill.skillname || predefinedText.skills.skillname}</li>
-              <li className='text-xs md:text-xs lg:text-xs'>{skill.skilldetails || predefinedText.skills.skilldetails}</li>
+              {/* <li className='text-xs md:text-xs lg:text-xs'>{skill.skilldetails || predefinedText.skills.skilldetails}</li> */}
             </ol>
           </div>
         ))}

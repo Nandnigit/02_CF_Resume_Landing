@@ -115,21 +115,21 @@ const Template1 = ({
           </p>
           <ul className="flex text-xs sm:text-xs md:text-xs lg:text-xs m-2 gap-4 font-semibold">
             <li>
-              <FaMapMarkerAlt className="inline-block align-text-top mr-1" />
-              {truncate(del.address || predefinedText.details.address, 25)}
+              <FaMapMarkerAlt className="inline-block  mr-1" />
+              {truncate(del.address || predefinedText.details.address, 30)}
             </li>
             <li>
-              <FaPhoneAlt className="inline-block align-text-top mr-1" />
+              <FaPhoneAlt className="inline-block  mr-1" />
               {truncate(del.phoneNumber || predefinedText.details.phoneNumber, 15)}
             </li>
             <li>
-              <FaEnvelope className="inline-block align-text-top mr-1" />
-              {truncate(del.email || predefinedText.details.email, 25)}
+              <FaEnvelope className="inline-block  mr-1" />
+              {truncate(del.email || predefinedText.details.email, 80)}
             </li>
             <li>
-              <FaLinkedin className="inline-block align-text-top mr-1" />
+              <FaLinkedin className="inline-block mr-1" />
               <a href={del.link || '#'} target="_blank" rel="noopener noreferrer">
-                {truncate(del.link || predefinedText.details.link, 15)}
+                {truncate(del.link || predefinedText.details.link, 80)}
               </a>
             </li>
             <li>
@@ -179,7 +179,7 @@ const Template1 = ({
         <h6 className="text-xs sm:text-sm md:text-sm lg:text-sm">{exp.role ||  predefinedText.experiences.role }</h6>
         <p className="text-xs sm:text-xs md:text-xs lg:text-xs">{exp.companyplace ||  predefinedText.experiences.companyplace}</p>
       </div>
-      <ul className={`${exp.companydescription ? 'text-xs sm:text-xs md:text-xs lg:text-xs' : ''} w-full break-all`}>
+      <ul className={`${exp.companydescription ? 'text-xs sm:text-xs md:text-xs lg:text-xs' : ''} w-[50%] break-all`}>
   {exp.companydescription ? (
     // If company description is provided, split by new lines and render each line as a list item
     exp.companydescription.split(/\r?\n/).map((line, i) => (
@@ -187,7 +187,7 @@ const Template1 = ({
         key={i}
         className={`${line.trim() ? 'before:content-[""] before:mr-1' : ''} text-xs sm:text-xs md:text-xs lg:text-xs m-2 w-full break-all`}
         style={{ marginBottom: '4px' }} // Adjust margin bottom as needed
-        dangerouslySetInnerHTML={{ __html: line ? `•${line}` : '' }}
+        dangerouslySetInnerHTML={{ __html: line ? `${line}` : '' }}
       />
     ))
   ) : (
@@ -234,9 +234,9 @@ const Template1 = ({
       <p className={`${skill.skillname ? 'before:content-["●"] before:m-2 font' : ''} break-all`}>
         {skill.skillname || predefinedText.skills.skillname}
       </p>
-      <p className={`${skill.skilldetails ? 'before:content-["●"] before:m-2' : 'ms-2'} w-auto break-all`}>
+      {/* <p className={`${skill.skilldetails ? 'before:content-["●"] before:m-2' : 'ms-2'} w-auto break-all`}>
         {skill.skilldetails || predefinedText.skills.skilldetails}
-      </p>
+      </p> */}
     </span>
   ))}{skillsfromapi && skillsfromapi.length > 0 && (
     <p className="text-start ">

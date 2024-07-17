@@ -137,9 +137,9 @@ function AIResume() {
             <thead>
               <tr className='border-2 border-white'>
                 <th className='border-2 border-white px-2 py-1'>Resume</th>
-                <th className='border-2 border-white px-2 py-1'>Resume Score</th>
-                <th className='border-2 border-white px-2 py-1'>Suggestion</th>
-                <th className='border-2 border-white px-2 py-1'>Improve with AI</th>
+                <th className='border-2 border-white px-2 py-1'>Score</th>
+                <th className='border-2 border-white px-2 py-1'>Suggest</th>
+                <th className='border-2 border-white px-2 py-1'>AI Improve</th>
                 
                 <th className='border-2 border-white px-2 py-1'>Created</th>
                 <th className='border-2 border-white px-2 py-1'>Actions</th>
@@ -176,13 +176,13 @@ function AIResume() {
                 </td>
 
                 <td className='border-2 border-white px-4'>
-                  <button className="text-white bg-yellow-500 px-3 py-3 items-center rounded-md text-lg font-semibold" onClick={handleClick2}>Suggest</button>
+                  <button className="text-white bg-yellow-500 px-1 py-1 items-center rounded-md text-lg font-semibold" onClick={handleClick2}>Suggest</button>
                 </td>
 
                 <td className='border-2 border-white px-4 text-center'>
                   <div className='relative'>
                     <div
-                      className='text-white hover:text-black px-1 py-1 items-center rounded-md text-base font-bold bg-yellow-500 cursor-pointer'
+                      className='text-white hover:text-black px-2 py-1 items-center rounded-md text-base font-bold bg-yellow-500 cursor-pointer'
                       onClick={handleClick}
                     >
                       AI

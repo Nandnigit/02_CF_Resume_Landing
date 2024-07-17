@@ -129,9 +129,9 @@ const Template8 = ({
                   <li>
                     <span className="m-2">&#8226;</span>{skill.skillname || "Skill Name"}
                   </li>
-                  <li>
+                  {/* <li>
                     <span className="m-2">&#8226;</span>{skill.skilldetails || "Skill Details"}
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             ))} <br />

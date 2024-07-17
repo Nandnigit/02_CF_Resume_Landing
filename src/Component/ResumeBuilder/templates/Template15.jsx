@@ -163,7 +163,7 @@ const Template15 = ({
         <div className="border-t border-gray-300 mt-1 mb-2"></div>
         <ul className="text-sm  pl-4">
           {skills.map((skill, index) => (
-            <li key={index}>{skill.skillname || predefinedText.skills.skillname}: {skill.skilldetails || predefinedText.skills.skilldetails}</li>
+            <li key={index}>{skill.skillname || predefinedText.skills.skillname}</li>
           ))}
         </ul>
       </div>

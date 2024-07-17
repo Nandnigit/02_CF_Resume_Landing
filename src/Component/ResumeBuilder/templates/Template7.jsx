@@ -151,9 +151,9 @@ const Template7 = ({
                     <span className="font-bold">{skill.skillname || predefinedText.skills.skillname}</span>
                     
                   </li>
-                  <li>
+                  {/* <li>
                     {skill.skilldetails || predefinedText.skills.skilldetails}
-                  </li>
+                  </li> */}
                 </div>
                 ))}
               </ul>

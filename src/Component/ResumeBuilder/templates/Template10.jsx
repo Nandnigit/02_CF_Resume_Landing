@@ -153,9 +153,9 @@ const Template10 = ({
                 <li>
                   {skill.skillname || predefinedText.skills.skillname}
                 </li>
-                <li className='text-xs md:text-xs lg:text-xs'>
+                {/* <li className='text-xs md:text-xs lg:text-xs'>
                   {skill.skilldetails || predefinedText.skills.skilldetails}
-                </li>
+                </li> */}
               </ul>
             </div>
           ))}
