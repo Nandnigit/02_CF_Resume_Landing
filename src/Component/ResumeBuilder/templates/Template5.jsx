@@ -77,8 +77,8 @@ const allDetailsFilled6 = summary.every(summar =>
         <div className='md:w-2/3 md:px-10 pt-4'>
           {details.map((del, index) => (
             <div key={index}>
-              <h3 className="text-lg md:text-xl lg:text-3xl text-blue-800 font-bold ">{del.name}</h3>
-              <p className='text-lg md:text-xl lg:text-lg mt-2'> {del.Profession}</p>
+              <h3 className="text-lg md:text-xl lg:text-3xl text-blue-800 font-bold ">{del.name|| predefinedText.details.name}</h3>
+              <p className='text-lg md:text-xl lg:text-lg mt-2'> {del.Profession|| predefinedText.details.profession}</p>
               {summary.map((sum, index) => (
       <div key={index}>
       <p
@@ -114,15 +114,15 @@ const allDetailsFilled6 = summary.every(summar =>
             <ul className=" text-xs md:text-xs lg:text-xs mt-2">
               {details.map((del, index) => (
                 <React.Fragment key={index}>
-                  <li><span className="m-2">&#8226;</span>{del.address}</li>
+                  <li><span className="m-2">&#8226;</span>{del.address|| predefinedText.details.address}</li>
                   <li className='text-xs md:text-xs lg:text-xs'>
-                    <span className="m-2">&#8226;</span>{del.phoneNumber}
+                    <span className="m-2">&#8226;</span>{del.phoneNumber|| predefinedText.details.phoneNumber}
                   </li>
                   <li className='text-xs md:text-xs lg:text-xs break-all'>
-                    <span className="m-2">&#8226;</span>{del.email}
+                    <span className="m-2">&#8226;</span>{del.email|| predefinedText.details.email}
                   </li>
                   <li className='text-xs md:text-xs lg:text-xs'>
-                    <span className="m-2">&#8226;</span><a href="">{del.link}</a>
+                    <span className="m-2">&#8226;</span><a href="">{del.link|| predefinedText.details.link}</a>
                   </li>
                 </React.Fragment>
               ))}

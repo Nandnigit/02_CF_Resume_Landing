@@ -82,12 +82,12 @@ const Template4 = ({
       <div>
       {details.map((del, index) => (
   <div key={index}>
-    <h3 className="text-xs sm:text-sm md:text-2xl lg:text-3xl text-cyan-600 font-bold ms-2">{del.name}</h3>
-    <p className="text-xs sm:text-sm md:text-xl lg:text-lg ms-2">{del.Profession}</p>
+    <h3 className="text-xs sm:text-sm md:text-2xl lg:text-3xl text-cyan-600 font-bold ms-2">{del.name|| predefinedText.details.name}</h3>
+    <p className="text-xs sm:text-sm md:text-xl lg:text-lg ms-2">{del.Profession|| predefinedText.details.Profession}</p>
     <ul className="flex text-xs sm:text-sm md:text-xs lg:text-xs m-2">
-      <li>{del.address}</li>
-      <li className={`${del.phoneNumber ? 'before:content-["•"] before:mr-1' : ''} w-2/2 break-all`}>{del.phoneNumber}</li>
-      <li className={`${del.email ? 'before:content-["•"] before:mr-1' : ''} w-2/2 break-all`}>{del.email}</li>
+      <li>{del.address|| predefinedText.details.address}</li>
+      <li className={`${del.phoneNumber ? 'before:content-["•"] before:mr-1' : ''} w-2/2 break-all`}>{del.phoneNumber|| predefinedText.details.phoneNumber}</li>
+      <li className={`${del.email ? 'before:content-["•"] before:mr-1' : ''} w-2/2 break-all`}>{del.email|| predefinedText.details.email}</li>
       <li className={`${del.link ? 'before:content-["•"] before:mr-1' : ''} w-2/2 break-all`}>
         <a href={del.link}>{del.link}</a>
       </li>
