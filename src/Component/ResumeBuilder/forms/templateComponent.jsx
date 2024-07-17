@@ -69,7 +69,7 @@ console.log(image, '=====')
   }
 
   return (
-    <div ref={ref} className='bg-white  border-2'>
+    <div ref={ref} className='bg-white  '>
       <div className=' '>
       <SelectedTemplateComponent
       

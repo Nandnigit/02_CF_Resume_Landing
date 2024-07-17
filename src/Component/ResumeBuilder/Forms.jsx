@@ -437,7 +437,7 @@ return (<div>
       </div>
       
 
-        <div className="flex ">
+        <div className="flex bg-gray-200 ">
         
           <div className="flex w-full sm:w-full justify-end">
             <div className="absolute h-screen ">
