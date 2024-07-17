@@ -25,11 +25,11 @@ import TemplateComponent from './forms/templateComponent';
 
 const predefinedColors = {
   Template1: '#F5F5F5',
-  Template2: '#F5F5F5',
+  Template2: '#ffffff',
   Template3: '#F5F5F5',
   Template4: '#F5F5F5',
   Template5: '#F5F5F5',
-  Template6: '#F5F5F5',
+  Template6: '#f0c9de',
   Template7: '#F5F5F5',
   Template8: '#F5F5F5',
   Template9: '#F5F5F5',
@@ -437,7 +437,7 @@ return (<div>
       </div>
       
 
-        <div className="flex">
+        <div className="flex ">
         
           <div className="flex w-full sm:w-full justify-end">
             <div className="absolute h-screen ">
@@ -644,9 +644,9 @@ start_date={resumeData.employmenthistory[0]?.start_date}
         </div>
       
 
-        <div className="flex">
+        <div className="flex justify-between bg-gray-200">
        
-          <div className="flex flex-col md:flex-row w-full sm:w-full justify-end">
+          <div className="flex flex-col md:flex-row w-full sm:w-full justify-end border-2">
             <div className="absolute h-screen ">
               {/* Conditionally render the screen component based on the current section */}
               {showComponent && screenComponents[sectionsList[currentStep]]}

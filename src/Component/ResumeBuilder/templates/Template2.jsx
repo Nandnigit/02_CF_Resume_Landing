@@ -53,7 +53,7 @@ const Template2 = ({
 
   return (
     <div className={`border px-5 ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`} style={{ fontFamily: font,  backgroundColor: boxBgColor  }}>
-      {!isPreviewScreen && !isTemplate1Previewing && (
+      {/* {!isPreviewScreen && !isTemplate1Previewing && (
         <div className="">
           {allDetailsFilled && (
             <div className="w-7 h-7 ps-2.5 mt-1.5 bg-white rounded-2xl absolute top-48 left-1 font-bold">1</div>
@@ -74,7 +74,7 @@ const Template2 = ({
             <div className="w-7 h-8 ps-2.5 pt-1 mt-28 bg-white rounded-2xl absolute top-64 left-1 font-bold">5</div>
           )}
         </div>
-      )}
+      )} */}
       <div className='flex flex-col md:flex-row'>
         <div className='md:w-2/3 md:px-10 pt-4'>
           {details.map((del, index) => (
@@ -135,7 +135,7 @@ const Template2 = ({
             </div>
           ))}
         </div>
-        <div className="md:w-1/3 md:p-4 bg-slate-100" style={{ backgroundColor: boxBgColor }}>
+        <div className="md:w-1/3 md:p-4 bg-gray-200" >
           <div>
           <h5 className='text-blue-800  '>CONTACT </h5>
             <div className="flex-grow border-t border-black align-super mt-5"></div>
@@ -171,14 +171,14 @@ const Template2 = ({
           <div className="flex-grow border-t border-black align-super mt-2"></div>
           {skills.map((skill, index) => (
             <div key={index}>
-              <ul className=" text-xs md:text-xs lg:text-xs mt-2">
-                <li>
-                  <span className="m-2">&#8226;</span>{skill.skillname || predefinedText.skills.skillname}
-                </li>
-                <li className='text-xs md:text-xs lg:text-xs'>
-                  <span className="m-2">&#8226;</span>{skill.skilldetails || predefinedText.skills.skilldetails}
-                </li>
-              </ul>
+              <div className=" text-xs md:text-xs lg:text-xs mt-2">
+                <div>
+                  {skill.skillname || predefinedText.skills.skillname}
+                </div>
+                <div className='text-xs md:text-xs lg:text-xs'>
+                  {skill.skilldetails || predefinedText.skills.skilldetails}
+                </div>
+              </div>
             </div>
           ))}
           <div>

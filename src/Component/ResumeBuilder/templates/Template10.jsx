@@ -80,7 +80,7 @@ const Template10 = ({
 
   return (
     <div className={`border break-all ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`} style={{ fontFamily: font }}>
-      {!isPreviewScreen &&  (
+      {/* {!isPreviewScreen &&  (
         <div className="">
           {allDetailsFilled && (
             <div className="w-7 h-7 ps-2.5 mt-1.5 bg-white rounded-2xl absolute top-48 left-1 font-bold">1</div>
@@ -101,9 +101,9 @@ const Template10 = ({
             <div className="w-7 h-8 ps-2.5 pt-1 mt-28 bg-white rounded-2xl absolute top-64 left-1 font-bold">5</div>
           )}
         </div>
-      )}
+      )} */}
       <div className='flex break-all'>
-        <div className="md:w-1/ ps-4 pt-5 bg-slate-100 text-white overflow-auto justify-center break-all" style={{ backgroundColor: boxBgColor }}>
+        <div className="md:w-1/ ps-4 pt-5 bg-gray-800 text-white overflow-auto justify-center break-all" >
           <div>
           
           <div className='flex'>
@@ -151,10 +151,10 @@ const Template10 = ({
             <div key={index}>
               <ul className=" text-xs md:text-xs lg:text-xs mt-2">
                 <li>
-                  <span className="m-2">&#8226;</span>{skill.skillname || predefinedText.skills.skillname}
+                  {skill.skillname || predefinedText.skills.skillname}
                 </li>
                 <li className='text-xs md:text-xs lg:text-xs'>
-                  <span className="m-2">&#8226;</span>{skill.skilldetails || predefinedText.skills.skilldetails}
+                  {skill.skilldetails || predefinedText.skills.skilldetails}
                 </li>
               </ul>
             </div>

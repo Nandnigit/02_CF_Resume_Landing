@@ -76,7 +76,7 @@ const Template1 = ({
   };
   return (
     <div
-      className={`border-2  border-gray-300 p-7 ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`}
+      className={` p-7 ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`}
       style={{ fontFamily: font,  backgroundColor: boxBgColor  }}
     >
       {/* Red circle indicating all fields are filled */}

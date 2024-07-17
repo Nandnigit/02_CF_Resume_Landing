@@ -75,7 +75,7 @@ const Template11 = ({
 
   return (
     <div className={`border break-all ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`} style={{ fontFamily: font }}>
-      {!isPreviewScreen && (
+      {/* {!isPreviewScreen && (
         <div className="">
           {allDetailsFilled && (
             <div className="w-7 h-7 ps-2.5 mt-1.5 bg-white rounded-2xl absolute top-48 left-1 font-bold">1</div>
@@ -96,9 +96,9 @@ const Template11 = ({
             <div className="w-7 h-8 ps-2.5 pt-1 mt-28 bg-white rounded-2xl absolute top-64 left-1 font-bold">5</div>
           )}
         </div>
-      )}
+      )} */}
       <div className='flex break-all'>
-        <div className="md:w-1/4 p-4 bg-sky-200 text-black overflow-auto justify-center break-all" style={{ backgroundColor: boxBgColor }}>
+        <div className="md:w-1/4 p-4 bg-sky-200 text-black overflow-auto justify-center break-all" >
           <div>
             <div className='flex items-center'>
               <div className="w-24 h-24 bg-white border-4 border-sky-400 text-center rounded-full overflow-hidden">

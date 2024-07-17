@@ -92,7 +92,7 @@ const Template3 = ({
                 <h4 className='font-bold text-xs'>{edu.coursename || predefinedText.educations.coursename},</h4>
                 <h6 className='text-xs'>{edu.schoolplace || predefinedText.educations.schoolplace}</h6>
               </div>
-              <p className='text-xs'>{edu.edmonth1} to {edu.edmonth2}</p>
+              <p className='text-xs'>{edu.edmonth1} - {edu.edmonth2}</p>
             </div>
             <p className='text-xs'>{edu.schoolname || predefinedText.educations.schoolname}</p>
           </div>
@@ -106,8 +106,8 @@ const Template3 = ({
         {skills.map((skill, index) => (
           <div key={index}>
             <ol className="text-xs md:text-xs lg:text-xs mt-2 font-bold">
-              <li><span className="m-2">&#8226;</span>{skill.skillname || predefinedText.skills.skillname}</li>
-              <li className='text-xs md:text-xs lg:text-xs'><span className="m-2">&#8226;</span>{skill.skilldetails || predefinedText.skills.skilldetails}</li>
+              <li>{skill.skillname || predefinedText.skills.skillname}</li>
+              <li className='text-xs md:text-xs lg:text-xs'>{skill.skilldetails || predefinedText.skills.skilldetails}</li>
             </ol>
           </div>
         ))}

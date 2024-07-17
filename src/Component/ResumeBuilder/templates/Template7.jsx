@@ -55,7 +55,7 @@ const Template7 = ({
       style={{ fontFamily: font,  backgroundColor: boxBgColor  }}
     >
       {/* Red circle indicating all fields are filled */}
-      {!isPreviewScreen  && (
+      {/* {!isPreviewScreen  && (
         <div className="">
           {allDetailsFilled && (
             <div className="w-7 h-7 ps-2.5 mt-1.5 bg-white rounded-2xl absolute top-48 left-1 font-bold">1</div>
@@ -76,7 +76,7 @@ const Template7 = ({
             <div className="w-7 h-8 ps-2.5 pt-1 mt-28 bg-white rounded-2xl absolute top-64 left-1 font-bold">5</div>
           )}
         </div>
-      )}
+      )} */}
 
       <div className='flex'>
         <div className='w-2/3 px-10 '>
@@ -112,7 +112,7 @@ const Template7 = ({
 
         </div>
 
-        <div className="w-1/3 p-4 bg-orange-100" style={{ backgroundColor: boxBgColor }}>
+        <div className="w-1/3 p-4 bg-orange-200" >
           <div>
             <h5 className='text-orange-700 font-bold'>CONTACT</h5>
             <div className="flex-grow border-t border-gray-300 align-super"></div>

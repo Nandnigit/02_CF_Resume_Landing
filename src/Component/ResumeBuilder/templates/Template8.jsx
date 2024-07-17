@@ -55,8 +55,8 @@ const Template8 = ({
   );
 
   return (
-    <div className={`border p-7 break-all ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`} style={{ fontFamily: font,  backgroundColor: boxBgColor  }}>
-     {!isPreviewScreen && !isTemplate1Previewing && (
+    <div className={`border bg-[#333456] p-7 break-all ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`} style={{ fontFamily: font,    }}>
+     {/* {!isPreviewScreen && !isTemplate1Previewing && (
         <div className="">
           {allDetailsFilled && (
             <div className="w-7 h-7 ps-2.5 mt-1.5 bg-white rounded-2xl absolute top-48 left-1 font-bold">1</div>
@@ -77,7 +77,7 @@ const Template8 = ({
             <div className="w-7 h-8 ps-2.5 pt-1 mt-28 bg-white rounded-2xl absolute top-64 left-1 font-bold">5</div>
           )}
         </div>
-      )}
+      )} */}
       <div className='bg-white  rounded-3xl h-full'>
         <div className='bg-stone-300 flex justify-between px-5 rounded-3xl '>
         
@@ -158,15 +158,15 @@ const Template8 = ({
             ))}
 
           </div>
-          <div className="md:w-1/3 ms-10 h-full pb-40 bg-slate-100  border-white mx-1 "style={{ backgroundColor: boxBgColor }} >
+          <div className="md:w-1/3 ms-10 h-full pb-40 bg-[#333456]  border-white mx-1 " >
 
             <div className='w-11/12 h-5/6 ms-2 bg-black border-white rounded-full border-8 text-center'>
             <img src= {image || profilephoto} alt=""  className=' ms-4 rounded-full h-5/6 w-5/6'/></div>
 
 
-            <div style={{ backgroundColor: boxBgColor }} className='px-5 h-full'>
+            <div  className='px-5 h-full bg-[#333456]'>
               <div >
-                <h6 className='font-extrabold text-white  pt-5 text-sm'>CONTACT ME</h6>
+                <h6 className='font-extrabold text-white  pt-5 text-sm '>CONTACT ME</h6>
                 <ul className="text-xs md:text-xs lg:text-xs text-white">
                   {details.map((del, index) => (
                     <React.Fragment key={index}>
@@ -195,10 +195,10 @@ const Template8 = ({
 
               <div>
                 {sectionadd.map((section, index) => (
-                  <div key={index} className="mt-5">
-                    <h5 className="font-extrabold text-white">{section.sectiontitle}</h5>
-                    <span className="text-white w-32">{section.sectionname}</span>
-                    <h6 className={`${paragraphSpacingClass} text-white break-all`}>{section.sectiondescription }</h6>
+                  <div key={index} className="mt-5 bg-blue-600">
+                    <h5 className="font-extrabold text-black">{section.sectiontitle}</h5>
+                    <span className="text-black w-32">{section.sectionname}</span>
+                    <h6 className={`${paragraphSpacingClass} text-black break-all`}>{section.sectiondescription }</h6>
                   </div>
                 ))}
               </div>

@@ -177,7 +177,7 @@ const Skills = ({ skills, handleInputChange, addSkill, deleteSkill, skillsfromap
               />
             </div>
 
-            <div className="w-3/4">
+            {/* <div className="w-3/4">
               <label htmlFor={`skilldetails-${index}`} className="block text-sm font-medium text-gray-700 mb-2">
                 Skill Details
               </label>
@@ -190,7 +190,7 @@ const Skills = ({ skills, handleInputChange, addSkill, deleteSkill, skillsfromap
                 placeholder="Skill Details"
                 className="w-full p-3 mb-4 border border-black rounded-lg"
               />
-            </div>
+            </div> */}
           </div>
 
           <button type="button" onClick={() => deleteSkill(index)} className="mt-2 text-red-500">

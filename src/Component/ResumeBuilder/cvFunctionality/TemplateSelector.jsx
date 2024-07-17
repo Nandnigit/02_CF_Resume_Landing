@@ -59,12 +59,15 @@ const TemplateSelector = ({ selectedTemplate, setSelectedTemplate, onImageUpload
 
   return (
     <div className="">
+      <div className=' flex justify-center '>
       <button
         onClick={() => setModalOpen(true)}
-        className="text-black border-2 border-blue-500  flex justify-center rounded-xl font-bold p-2 "
+        className="text-black hover:bg-gray-400  flex justify-center rounded-xl bg-white shadow font-bold p-2 "
       >
-        change template
+        Change Template
       </button>
+      </div>
+      
 
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
         <div className=" h-[600px] flex flex-col md:flex-row z-10 bg-white border rounded-lg shadow-lg mt-2 p-4 overflow-auto">

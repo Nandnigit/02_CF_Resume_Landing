@@ -72,7 +72,7 @@ const Template15 = ({
       className={`border-2 border-gray-300 p-7 ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`}
       style={{ fontFamily: font }}
     >
-      {!isPreviewScreen && !isTemplate1Previewing && (
+      {/* {!isPreviewScreen && !isTemplate1Previewing && (
         <div className="">
           {allDetailsFilled && (
             <div className="w-7 h-7 ps-2.5 mt-1.5 bg-white rounded-2xl absolute top-48 left-1 font-bold">1</div>
@@ -93,7 +93,7 @@ const Template15 = ({
             <div className="w-7 h-8 ps-2.5 pt-1 mt-28 bg-white rounded-2xl absolute top-64 left-1 font-bold">5</div>
           )}
         </div>
-      )}
+      )} */}
 
       <div className="flex items-center">
       <div className='flex items-center'>
@@ -161,7 +161,7 @@ const Template15 = ({
       <div className="mt-4">
         <h5 className="text-blue-700 font-bold">SKILLS</h5>
         <div className="border-t border-gray-300 mt-1 mb-2"></div>
-        <ul className="text-sm list-disc pl-4">
+        <ul className="text-sm  pl-4">
           {skills.map((skill, index) => (
             <li key={index}>{skill.skillname || predefinedText.skills.skillname}: {skill.skilldetails || predefinedText.skills.skilldetails}</li>
           ))}

@@ -51,9 +51,9 @@ const Template6 = ({
 
   return (
     <>
-      <div className={`p-8 text-violet-800 break-all bg-red-50 ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`} style={{ fontFamily: font,  backgroundColor: boxBgColor  }}>
+      <div className={`p-8 text-violet-800 break-all bg-red-100 ${textSizeClass} ${sectionSpacingClass} ${lineHeightClass}`} style={{ fontFamily: font,  backgroundColor: boxBgColor  }}>
         {/* Red circle indicating all fields are filled */}
-        {!isPreviewScreen  && (
+        {/* {!isPreviewScreen  && (
         <div className="">
           {allDetailsFilled && (
             <div className="w-7 h-7 ps-2.5 mt-1.5 bg-white rounded-2xl absolute top-48 left-1 font-bold">1</div>
@@ -74,7 +74,7 @@ const Template6 = ({
             <div className="w-7 h-8 ps-2.5 pt-1 mt-28 bg-white rounded-2xl absolute top-64 left-1 font-bold">5</div>
           )}
         </div>
-      )}
+      )} */}
 
         <div className='text-center'>
           <h1 className='text-lg md:text-xl lg:text-3xl font-bold ms-2'>{details[0]?.name || predefinedText.details.name}</h1>
@@ -120,8 +120,8 @@ const Template6 = ({
                   {skills.map((skill, index) => (
                     <div key={index} className=' break-all '>
                       <ol className="text-xs md:text-xs lg:text-xs ">
-                        <li><span className="m-2">&#8226;</span>{skill.skillname || predefinedText.skills.skillname}</li>
-                        <li className='text-xs md:text-xs lg:text-xs'><span className="m-2">&#8226;</span>{skill.skilldetails || predefinedText.skills.skilldetails}</li>
+                        <li>{skill.skillname || predefinedText.skills.skillname}</li>
+                        <li className='text-xs md:text-xs lg:text-xs'>{skill.skilldetails || predefinedText.skills.skilldetails}</li>
                       </ol>
                     </div>
                   ))}
